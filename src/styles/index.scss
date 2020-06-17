@@ -1,5 +1,7 @@
-$backgroundColor: #0000ff;
+@import './functions';
+@import './fonts';
+@import './variables';
+@import './mixins';
 
-.app {
-  background-color: $backgroundColor;
-}
+@import './reboot';
+@import './utilities';

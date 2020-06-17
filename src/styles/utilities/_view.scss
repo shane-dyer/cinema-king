@@ -1,0 +1,31 @@
+.u-fade-in-up {
+  @include transition(500ms);
+
+  @include media-breakpoint-up(lg) {
+    opacity: 0.01;
+    transform: translateY(px-to-rem(40));
+  }
+
+  &.is-active {
+    @include media-breakpoint-up(lg) {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+.u-fade-in-left {
+  @include transition(500ms);
+
+  @include media-breakpoint-up(lg) {
+    opacity: 0.01;
+    transform: translateX(-#{px-to-rem(40)});
+  }
+
+  &.is-active {
+    @include media-breakpoint-up(lg) {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}

@@ -1,0 +1,10 @@
+// ======================================================
+// Image Aspect Ratio
+// ======================================================
+//
+// @param $width int - The width of the image
+// @param $height int - The height of the image
+
+@function image-aspect-ratio($width: 1, $height: 1) {
+  @return (($height / $width) * 100) + 0%;
+}

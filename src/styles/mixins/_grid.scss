@@ -1,0 +1,50 @@
+// ======================================================
+// Grid
+// ======================================================
+
+/**
+ * @desc Set the display of a node to grid.
+ * @param $column-map map
+ * @param $gap em,rem,px
+ */
+@mixin grid($column-map: (xs: 1, lg: 3), $gap-map: (xs: $grid-gutter-width, lg: $grid-gutter-width)) {
+  @supports (display:grid) {
+    display: grid;
+
+    /**
+     * Assign the grid gap, and assign relative
+     * sizes based on breakpoints.
+     */
+    @each $key, $val in $gap-map {
+      @if ($key == xs) {
+        grid-gap: $val;
+      } @else {
+        @include media-breakpoint-up($key) {
+          grid-gap: $val;
+        }
+      }
+    }
+
+    /**
+     * Loop through the breakpoints and assign the relative templates.
+     */
+    @each $key, $val in $column-map {
+      @if ($key == xs) {
+        grid-template: auto / repeat($val, minmax(0, 1fr));
+      } @else {
+        @include media-breakpoint-up($key) {
+          grid-template: auto / repeat($val, minmax(0, 1fr));
+        }
+      }
+    }
+  }
+
+  // Child Nodes
+  // -------------------------------------------
+
+  > * + * {
+    @supports (display:grid) {
+      margin-top: 0;
+    }
+  }
+}

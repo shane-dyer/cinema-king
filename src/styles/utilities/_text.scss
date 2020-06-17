@@ -1,0 +1,91 @@
+.u-text--center {
+  text-align: center !important;
+  justify-content: center !important;
+}
+
+.u-text--center-lg {
+  @include media-breakpoint-up(lg) {
+    text-align: center !important;
+    justify-content: center !important;
+  }
+}
+
+.u-text--uppercase {
+  text-transform: uppercase !important;
+}
+
+.u-text--italic {
+  font-style: italic !important;
+}
+
+.u-text--bold {
+  font-weight: bold !important;
+}
+
+.u-text--base {
+  color: var(--brand-base-accent) !important;
+}
+
+.u-text--primary {
+  color: var(--brand-primary-accent) !important;
+}
+
+.u-text--secondary {
+  color: var(--brand-secondary-accent) !important;
+}
+
+.u-text--quaternary {
+  color: var(--brand-quaternary-accent) !important;
+}
+
+.u-text--hover-base {
+  @include transition;
+
+  transition-property: color;
+
+  &:hover,
+  &:focus {
+    @include media-breakpoint-up(lg) {
+    }
+    color: var(--brand-base-accent) !important;
+  }
+}
+
+.u-text--hover-primary {
+  @include transition;
+
+  transition-property: color;
+
+  &:hover,
+  &:focus {
+    @include media-breakpoint-up(lg) {
+    }
+    color: var(--brand-primary-accent) !important;
+  }
+}
+
+.u-text--hover-secondary {
+  @include transition;
+
+  transition-property: color;
+
+  &:hover,
+  &:focus {
+    @include media-breakpoint-up(lg) {
+      color: var(--brand-secondary-accent) !important;
+    }
+  }
+}
+
+.u-text--hover-quaternary {
+  @include transition;
+
+  transition-property: color;
+
+  &:hover,
+  &:focus {
+    @include media-breakpoint-up(lg) {
+      color: var(--brand-quaternary-accent) !important;
+    }
+  }
+}

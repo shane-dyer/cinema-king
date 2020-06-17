@@ -1,0 +1,86 @@
+// ======================================================
+// Font
+// ======================================================
+//
+// @param $key string - Relates to the $font-sizes item you wish to pull from.
+
+@mixin font($key: 'base') {
+  font-family: map-get-deep($font-sizes, $key, 'font-family');
+  text-transform: map-get-deep($font-sizes, $key, 'text-transform');
+
+  // Letter Spacing
+  // -------------------------------------------
+
+  $letter-spacing: map-get-deep($font-sizes, $key, 'letter-spacing');
+
+  @if (is-map($letter-spacing)) {
+    @each $key, $val in $letter-spacing {
+      @if ($key == xs) {
+        letter-spacing: $val;
+      } @else {
+        @include media-breakpoint-up($key) {
+          letter-spacing: $val;
+        }
+      }
+    }
+  } @else {
+    letter-spacing: $letter-spacing;
+  }
+
+  // Line Height
+  // -------------------------------------------
+
+  $line-height: map-get-deep($font-sizes, $key, 'line-height');
+
+  @if (is-map($line-height)) {
+    @each $key, $val in $line-height {
+      @if ($key == xs) {
+        line-height: $val;
+      } @else {
+        @include media-breakpoint-up($key) {
+          line-height: $val;
+        }
+      }
+    }
+  } @else {
+    line-height: $line-height;
+  }
+
+  // Font Weight
+  // -------------------------------------------
+
+  $font-weight: map-get-deep($font-sizes, $key, 'font-weight');
+
+  @if (is-map($font-weight)) {
+    @each $font-key, $font-val in $font-weight {
+      @if ($font-key == xs) {
+        font-weight: $font-val;
+      } @else {
+        @include media-breakpoint-up($font-key) {
+          font-weight: $font-val;
+        }
+      }
+    }
+  } @else {
+    font-weight: $font-weight;
+  }
+
+  // Font Size
+  // -------------------------------------------
+
+  $font-size: map-get-deep($font-sizes, $key, 'font-size');
+
+  @if (is-map($font-size)) {
+    @each $font-key, $font-val in map-get-deep($font-sizes, $key, 'font-size') {
+      @if ($font-key == xs) {
+        font-size: $font-val;
+      } @else {
+        @include media-breakpoint-up($font-key) {
+          font-size: $font-val;
+        }
+      }
+    }
+  } @else {
+    font-size: $font-size;
+  }
+}

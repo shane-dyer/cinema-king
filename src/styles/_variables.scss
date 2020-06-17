@@ -1,0 +1,169 @@
+// ======================================================
+// Variables
+// ======================================================
+
+//
+// Layout
+// -------------------------------------------
+
+$grid-columns: 12;
+$grid-gutter-width: px-to-rem(6);
+$grid-breakpoint-buffer: 30px;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+
+$container-max-widths: (
+  sm: px-to-rem(map_get($grid-breakpoints, 'sm') - $grid-breakpoint-buffer),
+  md: px-to-rem(map_get($grid-breakpoints, 'md') - $grid-breakpoint-buffer),
+  lg: px-to-rem(map_get($grid-breakpoints, 'lg') - $grid-breakpoint-buffer),
+  xl: px-to-rem(map_get($grid-breakpoints, 'xl') - $grid-breakpoint-buffer),
+  xxl: px-to-rem(map_get($grid-breakpoints, 'xxl') - $grid-breakpoint-buffer),
+);
+
+//
+// CSS Variables
+// -------------------------------------------
+
+:root {
+  // Colors
+  // -------------------------------------------
+
+  --color-white: #fff;
+  --color-black: #000;
+
+  --brand-primary-color: #2e19a5;
+  --brand-secondary-color: #f84464;
+
+  --body-text-color: #393939;
+  --body-background-color: #efefef;
+
+  --heading-text-color: #1c1c1c;
+
+  // Line Height
+  // -------------------------------------------
+
+  --line-height-base: 34px;
+
+  // Transitions
+  // -------------------------------------------
+
+  --transition-duration-base: 200ms;
+}
+
+//
+// Fonts
+// -------------------------------------------
+
+$font-family-base: 'Caladea', serif;
+$font-family-heading: 'Poppins', sans-serif;
+
+$font-sizes: (
+  'base': (
+    'font-size': (
+      'xs': px-to-rem(17),
+    ),
+    'font-weight': (
+      'xs': normal,
+    ),
+    'line-height': (
+      'xs': var(--line-height-base),
+    ),
+    'font-family': $font-family-base,
+    'letter-spacing': normal,
+    'text-transform': none,
+  ),
+  'h1': (
+    'font-size': (
+      'xs': px-to-rem(58),
+    ),
+    'font-weight': (
+      'xs': 600,
+    ),
+    'line-height': (
+      'xs': normal,
+    ),
+    'font-family': $font-family-heading,
+    'letter-spacing': normal,
+    'text-transform': none,
+  ),
+  'h2': (
+    'font-size': (
+      'xs': px-to-rem(48),
+    ),
+    'font-weight': (
+      'xs': 600,
+    ),
+    'line-height': (
+      'xs': normal,
+    ),
+    'font-family': $font-family-heading,
+    'letter-spacing': normal,
+    'text-transform': none,
+  ),
+  'h3': (
+    'font-size': (
+      'xs': px-to-rem(23),
+    ),
+    'font-weight': (
+      'xs': normal,
+    ),
+    'line-height': (
+      'xs': normal,
+    ),
+    'font-family': $font-family-heading,
+    'letter-spacing': normal,
+    'text-transform': none,
+  ),
+  'h4': (
+    'font-size': (
+      'xs': px-to-rem(18),
+    ),
+    'font-weight': (
+      'xs': 700,
+    ),
+    'line-height': (
+      'xs': normal,
+    ),
+    'font-family': $font-family-heading,
+    'letter-spacing': normal,
+    'text-transform': none,
+  ),
+);
+
+//
+// Sizes
+// -------------------------------------------
+
+$sizes: (
+  '0': 0,
+  'sm': px-to-rem(20),
+  'md': px-to-rem(40),
+  'lg': px-to-rem(60),
+  'xl': px-to-rem(80),
+);
+
+//
+// Transitions
+// -------------------------------------------
+
+$transition-base: all var(--transition-duration-base) ease-in-out;
+
+//
+// Z Indices
+// -------------------------------------------
+
+$z-index-dropdown: 1000;
+$z-index-toast: 1010;
+$z-index-sticky: 1020;
+$z-index-fixed: 1040;
+$z-index-drawer: 1060;
+$z-index-search-modal: 1060;
+$z-index-modal-backdrop: 1080;
+$z-index-modal: 1100;

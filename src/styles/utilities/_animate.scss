@@ -1,0 +1,33 @@
+.u-animate--fade-in-up {
+  opacity: 0.01;
+
+  &.is-expanding {
+    opacity: 0.01;
+    transform: translateY(#{px-to-rem(15)});
+  }
+
+  &.is-expanded {
+    @include transition($transition-base);
+
+    opacity: 1;
+    transform: translateY(0);
+    transition-property: opacity, transform;
+  }
+}
+
+.u-animate--fade-in-right {
+  opacity: 0.01;
+
+  &.is-expanding {
+    opacity: 0.01;
+    transform: translateX(#{px-to-rem(15)});
+  }
+
+  &.is-expanded {
+    @include transition($transition-base);
+
+    opacity: 1;
+    transform: translateY(0);
+    transition-property: opacity, transform;
+  }
+}

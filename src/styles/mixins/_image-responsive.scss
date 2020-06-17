@@ -1,0 +1,12 @@
+// ======================================================
+// Image Responsive
+// ======================================================
+//
+// Use this mixin for your images, as setting global <img>
+// tags to be responsive can have issues with third party
+// libraries such as Google maps.
+
+@mixin image-responsive() {
+  max-width: 100%;
+  height: auto;
+}

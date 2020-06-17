@@ -1,0 +1,21 @@
+// ======================================================
+// Image Placeholder
+// ======================================================
+//
+// Prepend a pseudo element that maintains the image
+// ratio to prevent the page jumping while loading
+// images.
+//
+// @param $width int - The width of the image
+// @param $height int - The height of the image
+
+@mixin image-placeholder($width: 0, $height: 0) {
+  display: flex;
+
+  &::before {
+    content: "";
+    display: block;
+    float: left;
+    padding-bottom: image-aspect-ratio($width, $height);
+  }
+}

@@ -1,0 +1,35 @@
+// ======================================================
+// Loader
+// ======================================================
+//
+// Add a loader to the node.
+//
+// @param $color
+// @param $size
+
+@mixin loader($color: currentColor, $size: 25px) {
+  @keyframes loader {
+    from {
+      transform: translate3d(-50%, -50%, 0) rotate(0deg);
+    }
+    to {
+      transform: translate3d(-50%, -50%, 0) rotate(360deg);
+    }
+  }
+
+  &::after {
+    animation: loader 1000ms infinite linear;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    content: "";
+    display: block;
+    width: $size;
+    height: $size;
+    border: 1px solid $color;
+    border-top-color: transparent;
+    border-radius: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    z-index: 1;
+  }
+}

@@ -1,0 +1,56 @@
+// ======================================================
+// Spacing
+// ======================================================
+
+$classes: (
+  'mt',
+  //'mr',
+  //'mb',
+  //'ml',
+  //'pt',
+  //'pr',
+  //'pb',
+  //'pl',
+);
+
+/**
+ * @desc Assign a margin based on a key and value.
+ * @param $direction string
+ * @param $value string
+ */
+@mixin spacing($direction, $value) {
+  @if $direction == 'mt' {
+    margin-top: $value !important;
+  } @else if $direction == 'mr' {
+    margin-right: $value !important;
+  } @else if $direction == 'mb' {
+    margin-bottom: $value !important;
+  } @else if $direction == 'ml' {
+    margin-left: $value !important;
+  } @else if $direction == 'pt' {
+    padding-top: $value !important;
+  } @else if $direction == 'pr' {
+    padding-right: $value !important;
+  } @else if $direction == 'pb' {
+    padding-bottom: $value !important;
+  } @else if $direction == 'pl' {
+    padding-left: $value !important;
+  }
+}
+
+// Generate spacing classes.
+@each $class in $classes {
+  @each $key, $val in $sizes {
+    .u-#{$class}--#{$key} {
+      @include spacing($class, $val);
+    }
+
+    @each $breakpointKey, $breakpointVal in $grid-breakpoints {
+      .u-#{$class}--#{$breakpointKey}-#{$key} {
+        @include media-breakpoint-up($breakpointKey) {
+          @include spacing($class, $val);
+        }
+      }
+    }
+  }
+}

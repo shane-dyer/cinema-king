@@ -1,0 +1,15 @@
+.u-d--none {
+  display: none !important;
+}
+
+.u-d--lg-none {
+  @include media-breakpoint-up(lg) {
+    display: none !important;
+  }
+}
+
+.u-d--lg-block {
+  @include media-breakpoint-up(lg) {
+    display: block !important;
+  }
+}

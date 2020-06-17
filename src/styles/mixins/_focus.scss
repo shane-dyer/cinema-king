@@ -1,0 +1,19 @@
+// ======================================================
+// Focus
+// ======================================================
+
+@mixin focus-style($color: var(--focus-ring-accent)) {
+  outline: none;
+  box-shadow: 0 0 0 px-to-rem(3) $color;
+}
+
+@mixin focus($color: var(--focus-ring-accent)) {
+  &:focus {
+    outline: none;
+
+    .is-tabbing & {
+      outline: none;
+      box-shadow: 0 0 0 px-to-rem(3) $color;
+    }
+  }
+}
