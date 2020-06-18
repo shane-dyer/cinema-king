@@ -1,8 +1,8 @@
-import { Layout } from 'components';
+import { Layout, Banner } from 'components';
 
 const Index = ({ title, description, ...props }) => (
   <Layout title={title} description={description}>
-    <p>Hello world!</p>
+    <Banner title="Sci-fi Movies of the decade" category="Feature" />
   </Layout>
 );
 
