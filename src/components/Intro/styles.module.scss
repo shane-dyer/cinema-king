@@ -1,0 +1,53 @@
+// ======================================================
+// Intro
+// ======================================================
+
+@import '../../styles/variables';
+
+.intro {
+  position: relative;
+  display: flex;
+  padding: 80px;
+  margin: -80px 0 35px;
+  background-color: #fff;
+  clip-path: polygon(1.5% 0, 100% 0, 100% 80.5%, 98.5% 100%, 0 100%, 0% 19.5%);
+  box-shadow: 0px -4px 30px rgba(0, 0, 0, 0.05), 0px 0px 1px rgba(0, 0, 0, 0.15);
+
+  .author {
+    flex-shrink: 0;
+    width: 155px;
+    padding-right: 36px;
+    border-right: 4px solid var(--brand-primary-color);
+    margin-right: 36px;
+    font-family: $font-family-heading;
+    line-height: 1.4;
+    letter-spacing: px-to-rem(0.6);
+
+    .name {
+      font-size: px-to-rem(14);
+      font-weight: 600;
+      color: var(--heading-text-color);
+
+      span {
+        font-weight: 900;
+      }
+    }
+
+    .date {
+      font-size: px-to-rem(11);
+      font-weight: 900;
+      font-style: italic;
+      text-transform: uppercase;
+      color: #b4b4b4;
+      margin-top: 14px;
+    }
+  }
+
+  .content {
+    display: block;
+
+    > h3 {
+      margin: -10px 0 35px;
+    }
+  }
+}
