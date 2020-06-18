@@ -9,8 +9,17 @@
   z-index: $z-index-fixed;
   top: 0;
   left: 0;
+  display: flex;
+  justify-content: center;
   width: 100%;
   height: $header-height;
   background-color: #fff;
   overflow: hidden;
+
+  // Invisible box to counter the logo, therefore centering the nav bar
+  &:after {
+    content: '';
+    width: $logo-width;
+    margin-left: auto;
+  }
 }

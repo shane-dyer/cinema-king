@@ -7,11 +7,13 @@
 
 .logo {
   display: flex;
+  flex-shrink: 0;
   align-items: center;
   justify-content: center;
-  width: 248px;
+  width: $logo-width;
   height: 100%;
   margin-left: -10px;
+  margin-right: auto;
   border-right: 5px solid var(--brand-secondary-color);
   background-color: var(--brand-primary-color);
   transform: skewX(-14deg);
