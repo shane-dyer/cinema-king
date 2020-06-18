@@ -1,0 +1,33 @@
+// ======================================================
+// Header
+// ======================================================
+
+@import '../../styles/variables';
+
+.list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    a {
+      display: flex;
+      align-items: center;
+      height: $header-height;
+      padding: 0 px-to-rem(30);
+      font-family: $font-family-heading;
+      font-weight: 600;
+      font-size: px-to-rem(12);
+      text-align: center;
+      letter-spacing: px-to-rem(0.6);
+      text-transform: uppercase;
+      color: #828282;
+      transition: color $transition-duration;
+
+      &:hover {
+        color: var(--heading-text-color);
+      }
+    }
+  }
+}
