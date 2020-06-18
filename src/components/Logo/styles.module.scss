@@ -1,0 +1,27 @@
+// ======================================================
+// Logo
+// ======================================================
+
+@import '../../styles/variables';
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 248px;
+  height: 100%;
+  margin-left: -10px;
+  border-right: 5px solid var(--brand-secondary-color);
+  background-color: var(--brand-primary-color);
+  background-clip: border-box;
+  transform: scale(1) skewX(-14deg);
+  transition: transform 150ms;
+
+  > * {
+    transform: skewX(14deg);
+  }
+
+  &:hover {
+    transform: scale(1.045) skewX(-14deg);
+  }
+}
