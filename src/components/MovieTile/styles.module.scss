@@ -1,0 +1,65 @@
+// ======================================================
+// Movie Tile
+// ======================================================
+
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.tile {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  .image {
+    @include image-placeholder(396, 280);
+    position: relative;
+
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .index {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 65px;
+    margin-top: -52px;
+    background-color: var(--brand-secondary-color);
+    font-family: $font-family-heading;
+    font-size: px-to-rem(23);
+    font-weight: 900;
+    font-style: italic;
+    color: var(--heading-text-color);
+    clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+  }
+
+  .name {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    align-self: flex-start;
+    height: 53px;
+    padding: 0 32px;
+    margin: -38px 0 0 40px;
+    background-color: var(--brand-primary-color);
+    font-family: $font-family-heading;
+    font-size: px-to-rem(18);
+    font-weight: 700;
+    color: #fff;
+    clip-path: polygon(5% 0, 100% 0, 95% 100%, 0 100%);
+
+    span {
+      font-size: px-to-rem(16);
+      font-weight: 200;
+      margin-left: 6px;
+    }
+  }
+}
