@@ -1,11 +1,12 @@
-import { Layout, Banner, Intro } from 'components';
+import { Layout, Banner, Intro, MovieList } from 'components';
 
 const apiUrl = process.env.API_URL;
 
-const Index = ({ movies, title, description, ...props }) => (
-  <Layout title={title} description={description}>
+const Index = ({ movies, siteTitle, description, ...props }) => (
+  <Layout siteTitle={siteTitle} description={description}>
     <Banner title="Sci-fi Movies of the decade" category="Feature" />
     <Intro />
+    <MovieList list={movies} />
   </Layout>
 );
 
@@ -20,7 +21,7 @@ export async function getStaticProps() {
   return {
     props: {
       movies: data.movies,
-      title: configData.default.title,
+      siteTitle: configData.default.title,
       description: configData.default.description,
     },
   };
