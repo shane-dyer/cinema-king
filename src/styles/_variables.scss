@@ -23,7 +23,6 @@ $grid-breakpoints: (
   md: 768px,
   lg: 992px,
   xl: 1200px,
-  xxl: 1400px,
 );
 
 $container-max-widths: (
@@ -31,7 +30,6 @@ $container-max-widths: (
   md: px-to-rem(map_get($grid-breakpoints, 'md') - $grid-breakpoint-buffer),
   lg: px-to-rem(map_get($grid-breakpoints, 'lg') - $grid-breakpoint-buffer),
   xl: px-to-rem(map_get($grid-breakpoints, 'xl') - $grid-breakpoint-buffer),
-  xxl: px-to-rem(map_get($grid-breakpoints, 'xxl') - $grid-breakpoint-buffer),
 );
 
 //
@@ -92,7 +90,7 @@ $font-sizes: (
       'xs': normal,
     ),
     'line-height': (
-      'xs': normal,
+      'xs': 1.8,
     ),
     'font-family': $font-family-heading,
     'letter-spacing': normal,
