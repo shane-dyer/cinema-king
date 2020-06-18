@@ -3,6 +3,7 @@
 // ======================================================
 
 @import '../../styles/variables';
+@import '../../styles/mixins';
 
 .nav {
   display: flex;
@@ -28,6 +29,10 @@
         text-transform: uppercase;
         color: #828282;
         transition: color $transition-duration;
+
+        @include media-breakpoint-down('md') {
+          padding: 0 px-to-rem(10);
+        }
 
         &:hover {
           color: var(--heading-text-color);

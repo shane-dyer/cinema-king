@@ -10,6 +10,7 @@
 @mixin grid(
   $column-map: (
     xs: 1,
+    sm: 2,
     lg: 3,
   ),
   $gap-map: (
