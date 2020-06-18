@@ -9,7 +9,9 @@ const NavBar = ({ items }) => {
       <ul className={styles.list}>
         {items.map(({ id, title }) => (
           <li key={id}>
-            <Link href={`#${title.toLowerCase()}`}>{title}</Link>
+            <Link href={`#${title.toLowerCase()}`}>
+              <a>{title}</a>
+            </Link>
           </li>
         ))}
       </ul>
