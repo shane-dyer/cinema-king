@@ -14,15 +14,15 @@
   margin-left: -10px;
   border-right: 5px solid var(--brand-secondary-color);
   background-color: var(--brand-primary-color);
-  transform: scale(1) skewX(-14deg);
-  transition: transform 150ms;
+  transform: skewX(-14deg);
 
-  > * {
-    transform: skewX(14deg);
+  svg {
+    transform: scale(1) skewX(14deg);
+    transition: transform 150ms;
   }
 
-  &:hover {
-    transform: scale(1.045) skewX(-14deg);
+  &:hover svg {
+    transform: scale(1.045) skewX(14deg);
   }
 }
 
