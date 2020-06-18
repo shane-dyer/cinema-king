@@ -1,0 +1,27 @@
+// ======================================================
+// Button
+// ======================================================
+
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.button {
+  display: inline-block;
+  padding: 12px 62px;
+  border: 1px solid #fff;
+  font-family: $font-family-heading;
+  font-size: px-to-rem(17);
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: px-to-rem(0.6);
+  text-transform: uppercase;
+  color: #fff;
+  background-color: transparent;
+  transition: color $transition-duration, border-color $transition-duration, background-color $transition-duration;
+
+  &:hover {
+    color: var(--heading-text-color);
+    border-color: var(--brand-secondary-color);
+    background-color: var(--brand-secondary-color);
+  }
+}
