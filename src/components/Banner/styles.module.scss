@@ -32,9 +32,5 @@
   font-style: italic;
   color: var(--heading-text-color);
   text-transform: uppercase;
-  transform: skewX(-14deg);
-
-  span {
-    transform: skewX(14deg);
-  }
+  clip-path: polygon(6% 0, 100% 0, 94% 100%, 0 100%);
 }
