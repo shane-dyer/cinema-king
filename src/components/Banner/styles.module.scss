@@ -1,5 +1,5 @@
 // ======================================================
-// Header
+// Banner
 // ======================================================
 
 @import '../../styles/variables';
@@ -11,6 +11,7 @@
   justify-content: center;
   height: 420px;
   background: url('/static/images/banner-bg.jpg') 50% 50% / cover no-repeat;
+  text-align: center;
 
   h1 {
     color: #fff;
@@ -23,6 +24,7 @@
   justify-content: center;
   width: 100px;
   height: 28px;
+  margin: 0 auto;
   background-color: var(--brand-secondary-color);
   font-family: $font-family-heading;
   font-size: px-to-rem(14);

@@ -7,8 +7,17 @@
  * @param $column-map map
  * @param $gap em,rem,px
  */
-@mixin grid($column-map: (xs: 1, lg: 3), $gap-map: (xs: $grid-gutter-width, lg: $grid-gutter-width)) {
-  @supports (display:grid) {
+@mixin grid(
+  $column-map: (
+    xs: 1,
+    lg: 3,
+  ),
+  $gap-map: (
+    xs: $grid-gutter-width,
+    lg: $grid-gutter-width,
+  )
+) {
+  @supports (display: grid) {
     display: grid;
 
     /**
@@ -17,10 +26,10 @@
      */
     @each $key, $val in $gap-map {
       @if ($key == xs) {
-        grid-gap: $val;
+        grid-gap: 28px $val;
       } @else {
         @include media-breakpoint-up($key) {
-          grid-gap: $val;
+          grid-gap: 28px $val;
         }
       }
     }
@@ -43,7 +52,7 @@
   // -------------------------------------------
 
   > * + * {
-    @supports (display:grid) {
+    @supports (display: grid) {
       margin-top: 0;
     }
   }

@@ -14,22 +14,22 @@ $logo-width: 248px;
 $line-height-base: 34px;
 
 $grid-columns: 12;
-$grid-gutter-width: px-to-rem(6);
+$grid-gutter-width: 6px;
 $grid-breakpoint-buffer: 30px;
 
-$grid-breakpoints: (
+$container-max-widths: (
   xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px,
+  sm: 576px + $grid-gutter-width * 2,
+  md: 768px + $grid-gutter-width * 2,
+  lg: 992px + $grid-gutter-width * 2,
+  xl: 1200px + $grid-gutter-width * 2,
 );
 
-$container-max-widths: (
-  sm: px-to-rem(map_get($grid-breakpoints, 'sm') - $grid-breakpoint-buffer),
-  md: px-to-rem(map_get($grid-breakpoints, 'md') - $grid-breakpoint-buffer),
-  lg: px-to-rem(map_get($grid-breakpoints, 'lg') - $grid-breakpoint-buffer),
-  xl: px-to-rem(map_get($grid-breakpoints, 'xl') - $grid-breakpoint-buffer),
+$grid-breakpoints: (
+  sm: px-to-rem(map_get($container-max-widths, 'sm') + $grid-breakpoint-buffer),
+  md: px-to-rem(map_get($container-max-widths, 'md') + $grid-breakpoint-buffer),
+  lg: px-to-rem(map_get($container-max-widths, 'lg') + $grid-breakpoint-buffer),
+  xl: px-to-rem(map_get($container-max-widths, 'xl') + $grid-breakpoint-buffer),
 );
 
 //
