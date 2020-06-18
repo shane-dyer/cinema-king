@@ -3,13 +3,13 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
+    "export": "next export",
     "format": "prettier --write components/**/*.{js,jsx,css,scss} pages/**/*.{js,jsx,css,scss}"
   },
   "dependencies": {
     "next": "^9.4.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "sanitize.css": "^11.0.1",
     "sass": "^1.26.8"
   }
 }
