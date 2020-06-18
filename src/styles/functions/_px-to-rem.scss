@@ -4,9 +4,9 @@
 //
 // Convert a pixel value to a rem value.
 // @param $pixels string
-// @param $context the base rem size (16px)
+// @param $context the base rem size (17px)
 
-@function px-to-rem($pixels, $context: 16) {
+@function px-to-rem($pixels, $context: 17) {
   @if (unitless($pixels)) {
     $pixels: $pixels * 1px;
   }

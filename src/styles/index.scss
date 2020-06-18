@@ -5,3 +5,16 @@
 
 @import './reboot';
 @import './utilities';
+
+:root {
+  // Colors
+  // -------------------------------------------
+
+  --brand-primary-color: #2e19a5;
+  --brand-secondary-color: #f84464;
+
+  --body-text-color: #393939;
+  --body-background-color: #efefef;
+
+  --heading-text-color: #1c1c1c;
+}

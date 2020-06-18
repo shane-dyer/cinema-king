@@ -2,9 +2,15 @@
 // Variables
 // ======================================================
 
+@import './functions';
+
 //
 // Layout
 // -------------------------------------------
+
+$header-height: px-to-rem(80);
+
+$line-height-base: 34px;
 
 $grid-columns: 12;
 $grid-gutter-width: px-to-rem(6);
@@ -28,36 +34,6 @@ $container-max-widths: (
 );
 
 //
-// CSS Variables
-// -------------------------------------------
-
-:root {
-  // Colors
-  // -------------------------------------------
-
-  --color-white: #fff;
-  --color-black: #000;
-
-  --brand-primary-color: #2e19a5;
-  --brand-secondary-color: #f84464;
-
-  --body-text-color: #393939;
-  --body-background-color: #efefef;
-
-  --heading-text-color: #1c1c1c;
-
-  // Line Height
-  // -------------------------------------------
-
-  --line-height-base: 34px;
-
-  // Transitions
-  // -------------------------------------------
-
-  --transition-duration-base: 200ms;
-}
-
-//
 // Fonts
 // -------------------------------------------
 
@@ -73,7 +49,7 @@ $font-sizes: (
       'xs': normal,
     ),
     'line-height': (
-      'xs': var(--line-height-base),
+      'xs': $line-height-base,
     ),
     'font-family': $font-family-base,
     'letter-spacing': normal,
@@ -153,7 +129,8 @@ $sizes: (
 // Transitions
 // -------------------------------------------
 
-$transition-base: all var(--transition-duration-base) ease-in-out;
+$transition-duration: 200ms;
+$transition-base: all $transition-duration ease-in-out;
 
 //
 // Z Indices

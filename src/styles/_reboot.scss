@@ -10,7 +10,7 @@
 
 html {
   font-family: $font-family-base;
-  font-size: initial;
+  font-size: 17px;
   line-height: normal;
   color: var(--body-text-color);
   background: var(--body-background-color);
@@ -22,13 +22,14 @@ body {
   @include font('base');
 
   width: 100%;
+  padding-top: $header-height;
+  margin: 0;
+  color: var(--body-text-color);
+  background: var(--body-background-color);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-kerning: auto;
-  margin: 0;
-  color: var(--body-text-color);
-  background: var(--body-background-color);
 }
 
 input,
