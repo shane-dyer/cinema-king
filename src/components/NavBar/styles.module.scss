@@ -4,29 +4,42 @@
 
 @import '../../styles/variables';
 
-.list {
+.nav {
   display: flex;
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  justify-content: center;
+  height: 100%;
 
-  li {
-    a {
-      display: flex;
-      align-items: center;
-      height: $header-height;
-      padding: 0 px-to-rem(30);
-      font-family: $font-family-heading;
-      font-weight: 600;
-      font-size: px-to-rem(12);
-      text-align: center;
-      letter-spacing: px-to-rem(0.6);
-      text-transform: uppercase;
-      color: #828282;
-      transition: color $transition-duration;
+  .list {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 
-      &:hover {
-        color: var(--heading-text-color);
+    li {
+      a {
+        padding: 0 px-to-rem(30);
+        font-family: $font-family-heading;
+        font-weight: 600;
+        font-size: px-to-rem(12);
+        text-align: center;
+        letter-spacing: px-to-rem(0.6);
+        text-transform: uppercase;
+        color: #828282;
+        transition: color $transition-duration;
+
+        &:hover {
+          color: var(--heading-text-color);
+        }
+
+        footer & {
+          color: #fff;
+
+          &:hover {
+            color: var(--brand-secondary-color);
+          }
+        }
       }
     }
   }

@@ -5,7 +5,7 @@ const NavBar = ({ items }) => {
   if (!Array.isArray(items) || !items.length) return null;
 
   return (
-    <nav role="navigation">
+    <nav className={styles.nav} role="navigation">
       <ul className={styles.list}>
         {items.map(({ id, title }) => (
           <li key={id}>
