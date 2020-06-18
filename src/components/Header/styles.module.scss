@@ -15,6 +15,7 @@
   height: $header-height;
   background-color: #fff;
   overflow: hidden;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
 
   // Invisible box to counter the logo, therefore centering the nav bar
   &:after {
