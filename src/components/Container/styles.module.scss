@@ -1,0 +1,10 @@
+// ======================================================
+// Container
+// ======================================================
+
+@import '../../styles/mixins';
+
+.container {
+  @include make-container;
+  @include make-container-max-widths;
+}
