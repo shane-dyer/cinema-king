@@ -1,7 +1,7 @@
 import { Layout } from 'components';
 
 const Index = ({ title, description, ...props }) => (
-  <Layout>
+  <Layout title={title} description={description}>
     <p>Hello world!</p>
   </Layout>
 );
