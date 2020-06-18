@@ -3,6 +3,7 @@
 // ======================================================
 
 @import '../../styles/variables';
+@import '../../styles/mixins';
 
 .logo {
   display: flex;
@@ -13,7 +14,6 @@
   margin-left: -10px;
   border-right: 5px solid var(--brand-secondary-color);
   background-color: var(--brand-primary-color);
-  background-clip: border-box;
   transform: scale(1) skewX(-14deg);
   transition: transform 150ms;
 
@@ -24,4 +24,8 @@
   &:hover {
     transform: scale(1.045) skewX(-14deg);
   }
+}
+
+.title {
+  @include sr-only;
 }

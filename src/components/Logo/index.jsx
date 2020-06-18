@@ -10,7 +10,7 @@ const Logo = () => (
           fill="white"
         />
       </svg>
-      <span className="u-sr-only">CinemaKing</span>
+      <span className={styles.title}>CinemaKing</span>
     </a>
   </Link>
 );
