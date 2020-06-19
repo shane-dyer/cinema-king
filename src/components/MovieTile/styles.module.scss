@@ -6,19 +6,41 @@
 @import '../../styles/mixins';
 
 .tile {
+  $transition-duration: 300ms;
+
   position: relative;
   display: flex;
   flex-direction: column;
+  cursor: pointer;
 
   .image {
     @include image-placeholder(396, 280);
     position: relative;
+    background-color: transparent;
+    transition: background-color $transition-duration;
+
+    .overlay {
+      position: absolute;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+
+      svg {
+        opacity: 0;
+        transform: scale(0.9);
+        transition: opacity $transition-duration, transform $transition-duration;
+      }
+    }
 
     img {
       position: absolute;
       width: 100%;
       height: 100%;
       object-fit: cover;
+      mix-blend-mode: multiply;
     }
   }
 
@@ -60,6 +82,17 @@
       font-size: px-to-rem(16);
       font-weight: 200;
       margin-left: 6px;
+    }
+  }
+
+  &:hover {
+    .image {
+      background-color: lighten(#2e19a5, 30%);
+
+      .overlay svg {
+        opacity: 1;
+        transform: scale(1);
+      }
     }
   }
 }
