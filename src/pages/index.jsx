@@ -1,21 +1,23 @@
-import { Layout, Banner, Intro, MovieList, CallToAction } from 'components';
+import {
+  Layout,
+  Banner,
+  Intro,
+  MovieList,
+  CallToAction,
+  ButtonLink,
+} from 'components';
 
-const Index = ({ movies, siteTitle, description }) => {
-  return (
-    <Layout siteTitle={siteTitle} description={description}>
-      <Banner title="Sci-fi Movies of the decade" category="Feature" />
-      <Intro />
-      <MovieList list={movies} />
-      <CallToAction
-        title="Join the Kingdom for just $5"
-        button={{
-          href: '#sign-up',
-          text: 'Sign Up',
-        }}
-      />
-    </Layout>
-  );
-};
+const Index = ({ movies, siteTitle, description }) => (
+  <Layout siteTitle={siteTitle} description={description}>
+    <Banner title="Sci-fi Movies of the decade" category="Feature" />
+    <Intro />
+    <MovieList list={movies} />
+    <CallToAction>
+      <h2>Join the Kingdom for just $5</h2>
+      <ButtonLink href="#sign-up">Sign Up</ButtonLink>
+    </CallToAction>
+  </Layout>
+);
 
 export default Index;
 

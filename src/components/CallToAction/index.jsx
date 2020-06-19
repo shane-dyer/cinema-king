@@ -1,14 +1,9 @@
-import { Container, ButtonLink } from 'components';
+import { Container } from 'components';
 import styles from './styles.module.scss';
 
-const CallToAction = ({ title, button }) => (
+const CallToAction = ({ children }) => (
   <section className={styles.banner}>
-    <Container>
-      {title && <h2>{title}</h2>}
-      {button?.href && button?.text ? (
-        <ButtonLink href={button.href}>{button.text}</ButtonLink>
-      ) : null}
-    </Container>
+    <Container>{children}</Container>
   </section>
 );
 
