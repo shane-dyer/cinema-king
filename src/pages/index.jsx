@@ -4,7 +4,7 @@ import {
   Intro,
   MovieList,
   CallToAction,
-  ButtonLink,
+  Button,
 } from 'components';
 
 const Index = ({ movies, siteTitle, description }) => (
@@ -14,7 +14,7 @@ const Index = ({ movies, siteTitle, description }) => (
     <MovieList list={movies} />
     <CallToAction>
       <h2>Join the Kingdom for just $5</h2>
-      <ButtonLink href="#sign-up">Sign Up</ButtonLink>
+      <Button href="#sign-up">Sign Up</Button>
     </CallToAction>
   </Layout>
 );

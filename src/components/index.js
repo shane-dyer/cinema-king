@@ -1,5 +1,5 @@
 export { default as Banner } from './Banner';
-export { default as ButtonLink } from './ButtonLink';
+export { default as Button } from './Button';
 export { default as CallToAction } from './CallToAction';
 export { default as Container } from './Container';
 export { default as Dialog } from './Dialog';

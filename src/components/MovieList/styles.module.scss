@@ -9,3 +9,11 @@
   @include grid;
   padding: 35px 0 80px;
 }
+
+.small {
+  position: absolute;
+  right: $grid-gutter-width;
+  font-family: $font-family-heading;
+  font-size: px-to-rem(12);
+  cursor: pointer;
+}

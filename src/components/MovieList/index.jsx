@@ -11,11 +11,11 @@ const MovieList = ({ list }) => {
   };
 
   return (
-    <section>
+    <section className={styles.section}>
       <Container>
-        <button type="button" onClick={handleShuffleClick}>
+        <small className={styles.small} onClick={handleShuffleClick}>
           Shuffle Movie List
-        </button>
+        </small>
         <div className={styles.grid}>
           {movies.map((item, index) => (
             <MovieTile key={item.id} index={index + 1} {...item} />
