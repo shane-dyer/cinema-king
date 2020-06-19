@@ -23,12 +23,13 @@ export default Index;
 
 export async function getStaticProps() {
   let movies;
-  const apiUrl = process.env.API_URL;
+  const api = process.env.API_URL;
 
   const configData = await import('../../siteconfig.json');
 
   try {
-    const response = await fetch(apiUrl);
+    const response = await fetch(api);
+    if (!response.ok) throw new Error(response.statusText);
     const { data } = await response.json();
     movies = data.movies;
   } catch (e) {
