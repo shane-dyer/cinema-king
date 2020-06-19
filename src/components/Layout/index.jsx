@@ -1,16 +1,21 @@
-import { useDispatch, useSelector } from 'react-redux';
+import { useCallback } from 'react';
 import Head from 'next/head';
-import { closeModalAsync, selectOpen, selectMovie } from 'store/reducers';
-import { Header, Footer } from 'components';
+import { useDispatch, useSelector } from 'react-redux';
+import { Header, Footer, Dialog } from 'components';
+import {
+  selectModalOpen,
+  selectModalMovie,
+  closeModalAsync,
+} from 'store/reducers';
 
 const Layout = ({ children, siteTitle, description }) => {
   const dispatch = useDispatch();
-  const isModalOpen = useSelector(selectOpen);
-  const selectedMovie = useSelector(selectMovie);
+  const isModalOpen = useSelector(selectModalOpen);
+  const modalMovie = useSelector(selectModalMovie);
 
-  const handleCloseClick = () => {
+  const handleModalClose = useCallback(() => {
     dispatch(closeModalAsync());
-  };
+  }, [dispatch, closeModalAsync]);
 
   return (
     <>
@@ -27,11 +32,11 @@ const Layout = ({ children, siteTitle, description }) => {
       <Header />
       <main role="main">{children}</main>
       <Footer />
-
-      <dialog open={isModalOpen}>
-        <h3>{selectedMovie?.name}</h3>
-        <button onClick={handleCloseClick}>Close</button>
-      </dialog>
+      <Dialog open={isModalOpen} handleClose={handleModalClose}>
+        <h3>
+          {modalMovie?.name} ({modalMovie?.releaseYear})
+        </h3>
+      </Dialog>
     </>
   );
 };

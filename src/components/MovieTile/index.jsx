@@ -8,13 +8,7 @@ const MovieTile = ({ name, release_date, post_url, index }) => {
   const releaseYear = new Date(release_date).getFullYear();
 
   const handleMovieClick = () => {
-    dispatch(
-      openModal({
-        name,
-        releaseYear,
-        image: post_url,
-      })
-    );
+    dispatch(openModal({ name, releaseYear }));
   };
 
   return (

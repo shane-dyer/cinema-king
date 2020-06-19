@@ -22,14 +22,16 @@ export const modalSlice = createSlice({
   },
 });
 
-export const selectOpen = (state) => state.modal.open;
-export const selectMovie = (state) => state.modal.movie;
+export const selectModalOpen = (state) => state.modal.open;
+export const selectModalMovie = (state) => state.modal.movie;
 
 export const closeModalAsync = () => (dispatch) => {
   dispatch(closeModal());
+
+  // For fade out transition
   setTimeout(() => {
     dispatch(clearMovie());
-  }, 500);
+  }, 400);
 };
 
 export const { openModal, closeModal, clearMovie } = modalSlice.actions;

@@ -2,6 +2,7 @@ export { default as Banner } from './Banner';
 export { default as ButtonLink } from './ButtonLink';
 export { default as CallToAction } from './CallToAction';
 export { default as Container } from './Container';
+export { default as Dialog } from './Dialog';
 export { default as Footer } from './Footer';
 export { default as Header } from './Header';
 export { default as Intro } from './Intro';

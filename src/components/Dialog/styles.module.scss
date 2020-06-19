@@ -1,0 +1,31 @@
+// ======================================================
+// Dialog
+// ======================================================
+
+@import '../../styles/variables';
+
+$dialog-width: 376px;
+$dialog-height: 116px;
+
+.dialog {
+  display: block !important;
+  position: fixed;
+  z-index: $z-index-modal;
+  top: 50%;
+  bottom: auto;
+  left: 50%;
+  right: auto;
+  width: $dialog-width;
+  height: $dialog-height;
+  text-align: center;
+  box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-$dialog-width/2, -$dialog-height/2);
+  transition: opacity 400ms, visibility 400ms;
+
+  &[open] {
+    opacity: 1;
+    visibility: visible;
+  }
+}

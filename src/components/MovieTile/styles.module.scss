@@ -6,7 +6,7 @@
 @import '../../styles/mixins';
 
 .tile {
-  $transition-duration: 300ms;
+  $transition-duration: 250ms;
 
   position: relative;
   display: flex;
@@ -30,7 +30,7 @@
 
       svg {
         opacity: 0;
-        transform: scale(0.9);
+        transform: scale(0.925);
         transition: opacity $transition-duration, transform $transition-duration;
       }
     }
