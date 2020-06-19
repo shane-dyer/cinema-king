@@ -6,6 +6,8 @@
 @import '../../styles/mixins';
 
 .button {
+  @include strip-button-style;
+
   display: inline-block;
   padding: 12px 62px;
   border: 1px solid #fff;
@@ -13,11 +15,14 @@
   font-size: px-to-rem(17);
   font-weight: 600;
   text-align: center;
+  line-height: $line-height-base;
   letter-spacing: px-to-rem(0.6);
   text-transform: uppercase;
   color: #fff;
   background-color: transparent;
-  transition: color $transition-duration, border-color $transition-duration, background-color $transition-duration;
+  cursor: pointer;
+  transition: color $transition-duration, border-color $transition-duration,
+    background-color $transition-duration;
 
   &:hover {
     color: var(--heading-text-color);
